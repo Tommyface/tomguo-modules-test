@@ -1,0 +1,21 @@
+name: 模块清单校验
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: 摘要一致性
+        run: python3 scripts/fill_module_digest.py modules/ --check
+      - name: manifest 严格校验
+        run: python3 scripts/check_manifest.py modules/ --strict
+      - name: 清单产物一致性
+        run: python3 scripts/build_registry.py modules/ --out dist/ --base-url ${{ vars.REGISTRY_BASE_URL }} --check
