@@ -1,0 +1,44 @@
+{
+  "name": "全量源",
+  "description": "内部自用，不对外发布。",
+  "api": 1,
+  "plugins": [
+    {
+      "id": "jinpai",
+      "name": "金牌影视",
+      "version": "1.0.0",
+      "description": "金牌影视匿名接口：分类、详情与直链播放。列表与取流用 MD5+SHA1 签名，详情走服务端渲染页面。",
+      "minApi": 0,
+      "adult": false,
+      "capabilities": [
+        "cover"
+      ],
+      "hosts": [
+        "www.jiabaide.cn"
+      ],
+      "mainSha256": "ec26590a77adfcb03e574e28ce7dc0ed9947d00b10bc50bfce34f47e00ed9c7d",
+      "zip": "https://tommyfa.ccwu.cc/tomguo/jinpai-1.0.0.zip",
+      "size": 5838
+    },
+    {
+      "id": "xingya",
+      "name": "星芽短剧",
+      "version": "1.0.0",
+      "description": "星芽短剧 App 接口：设备匿名登录换 JWT，分类、搜索、详情与直链播放。令牌存 host 存储。",
+      "minApi": 0,
+      "adult": false,
+      "capabilities": [
+        "search",
+        "cover",
+        "recommendations"
+      ],
+      "hosts": [
+        "app.whjzjx.cn",
+        "u.shytkjgs.com"
+      ],
+      "mainSha256": "492fb923b650c011949c8ab578936cc77c67f1bc8c6b3fa8b158fa0374b2ea3e",
+      "zip": "https://tommyfa.ccwu.cc/tomguo/xingya-1.0.0.zip",
+      "size": 7026
+    }
+  ]
+}
